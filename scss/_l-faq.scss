@@ -1,2 +1,50 @@
 .faq {
+  &__title {
+    margin: 0 0 32px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #f5f5f5;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 0 0 30px;
+    border-bottom: 2px dashed rgba($color: #f5f5f5, $alpha: 0.1);
+
+    &:last-child {
+      padding: 0;
+      border: none;
+    }
+
+    &-question {
+      margin: 0 0 10px;
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #78f7a8;
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+
+    &-answer {
+      padding-left: 40px;
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #f5f5f5;
+
+      @include tablet {
+        padding-left: 20px;
+        font-size: 20px;
+      }
+    }
+  }
 }

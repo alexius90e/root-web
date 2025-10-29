@@ -65,6 +65,55 @@ img {
   }
 }
 
+.faq__title {
+  margin: 0 0 32px;
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #f5f5f5;
+}
+.faq__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+.faq__item {
+  padding: 0 0 30px;
+  border-bottom: 2px dashed rgba(245, 245, 245, 0.1);
+}
+.faq__item:last-child {
+  padding: 0;
+  border: none;
+}
+.faq__item-question {
+  margin: 0 0 10px;
+  font-family: "Suisse Int'l Mono", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #78f7a8;
+}
+@media (max-width: 768px) {
+  .faq__item-question {
+    font-size: 20px;
+  }
+}
+.faq__item-answer {
+  padding-left: 40px;
+  font-family: "Suisse Int'l Mono", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #f5f5f5;
+}
+@media (max-width: 768px) {
+  .faq__item-answer {
+    padding-left: 20px;
+    font-size: 20px;
+  }
+}
+
 .contact-us__title {
   margin: 0;
   font-family: "Geist", sans-serif;
