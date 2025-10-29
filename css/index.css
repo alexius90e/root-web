@@ -64,6 +64,108 @@ img {
   }
 }
 
+.secure-internet__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 90px;
+}
+@media (max-width: 1024px) {
+  .secure-internet__wrapper {
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .secure-internet__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.secure-internet__figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+@media (max-width: 768px) {
+  .secure-internet__figure {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.secure-internet__figure-image {
+  display: block;
+  max-width: 100%;
+  width: 220px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .secure-internet__figure-image {
+    width: 193px;
+  }
+}
+.secure-internet__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 642px;
+          flex: 0 1 642px;
+}
+@media (max-width: 768px) {
+  .secure-internet__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.secure-internet__info-title, .secure-internet__info-subtitle {
+  margin: 0;
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+  color: #78f7a8;
+}
+@media (max-width: 1024px) {
+  .secure-internet__info-title, .secure-internet__info-subtitle {
+    font-size: 64px;
+  }
+}
+@media (max-width: 768px) {
+  .secure-internet__info-title, .secure-internet__info-subtitle {
+    font-size: 50px;
+  }
+}
+.secure-internet__info-title {
+  color: #78f7a8;
+}
+.secure-internet__info-subtitle {
+  color: #f5f5f5;
+}
+.secure-internet__info-description {
+  margin: 40px 0 0;
+  font-family: "Suisse Int'l Mono", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  color: #f5f5f5;
+}
+@media (max-width: 768px) {
+  .secure-internet__info-description {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
 .how-it-works__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
