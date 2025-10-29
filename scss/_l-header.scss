@@ -1,11 +1,21 @@
 .header {
   padding: 80px 0 0;
 
+  @include tablet {
+    padding-top: 40px;
+  }
+
   &__main {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+
+    @include tablet {
+      position: relative;
+      z-index: 9999;
+    }
   }
 
   &__logo {
@@ -19,8 +29,91 @@
     }
   }
 
+  &__burger {
+    display: none;
+    flex: 0 0 auto;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 40px;
+      padding: 0;
+      aspect-ratio: 1;
+      box-sizing: border-box;
+      border: none;
+      background-color: rgba($color: #ffffff, $alpha: 0);
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 34px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: #d2e4ff;
+        transition: transform ease-in-out 0.2s;
+        will-change: transform;
+      }
+
+      &::before {
+        transform: translateY(6px);
+      }
+
+      &::after {
+        transform: translateY(-6px);
+      }
+
+      &.active::before {
+        transform: translateY(1px) rotate(45deg);
+      }
+
+      &.active::after {
+        transform: translateY(-1px) rotate(-45deg);
+      }
+    }
+  }
+
   &__menu {
     margin: 10px 0 0;
+    box-sizing: border-box;
+
+    @include tablet {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      max-width: 100dvw;
+      margin: 0;
+      padding: 124px 32px 40px;
+      background-color: #101112;
+      transform: translateX(120dvw);
+      transition: transform ease-in-out 0.2s;
+      will-change: transform;
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &-wrapper {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        max-height: calc(100dvh - 124px - 40px);
+        height: 100%;
+        overflow: auto;
+      }
+    }
   }
 
   &__nav {
@@ -29,18 +122,52 @@
     gap: 16px;
     padding: 0 40px;
 
+    @include tablet {
+      flex-direction: column;
+      gap: 40px;
+      padding: 0;
+    }
+
     &-link {
       display: inline-block;
       padding: 0px 4px;
+      box-sizing: border-box;
       font-family: "Suisse Int'l Mono", sans-serif;
       font-weight: 400;
       font-size: 24px;
       color: #78f7a8;
       background-color: #212a24;
+
+      @include tablet {
+        width: fit-content;
+      }
     }
   }
 
   &__contacts {
     display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+
+    &-title {
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+      color: #f5f5f5;
+    }
+
+    &-email {
+      &-link {
+        font-family: 'Geist', sans-serif;
+        font-weight: 400;
+        font-size: 40px;
+        color: #78f7a8;
+      }
+    }
   }
 }

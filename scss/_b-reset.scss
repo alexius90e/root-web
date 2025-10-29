@@ -21,6 +21,12 @@ body {
   overflow-y: scroll;
   color: #ffffff;
   background-color: #101112;
+
+  &.hidden {
+    @include tablet {
+      overflow: hidden;
+    }
+  }
 }
 
 a,
