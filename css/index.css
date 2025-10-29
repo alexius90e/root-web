@@ -10,8 +10,8 @@ body {
   position: relative;
   margin: 0;
   overflow-y: scroll;
-  color: #181d42;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #101112;
 }
 
 a,
@@ -32,10 +32,10 @@ img {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1104px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
