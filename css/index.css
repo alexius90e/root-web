@@ -391,6 +391,214 @@ img {
   }
 }
 
+.why-choose-us__title {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #f5f5f5;
+}
+.why-choose-us__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .why-choose-us__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.why-choose-us__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% + 18px);
+          flex: 0 0 calc(25% + 18px);
+  min-width: calc(25% + 18px);
+  max-width: calc(25% + 18px);
+  margin-left: -24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    min-width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-top: -24px;
+  }
+}
+.why-choose-us__card:first-child {
+  margin-left: 0;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:first-child {
+    margin-top: 0;
+  }
+}
+.why-choose-us__card:nth-child(even) {
+  padding-top: 164px;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:nth-child(even) {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0;
+  }
+}
+.why-choose-us__card:nth-child(odd) {
+  padding-bottom: 164px;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:nth-child(odd) {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0;
+  }
+}
+.why-choose-us__card-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  min-height: 280px;
+  padding: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #101112;
+  background-color: #212a24;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 380px;
+    min-width: 220px;
+    min-height: 220px;
+  }
+}
+@media (max-width: 576px) {
+  .why-choose-us__card-content {
+    max-width: calc(100% - 180px);
+  }
+}
+.why-choose-us__card-content::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 100px;
+  border: 1px solid #78f7a8;
+}
+.why-choose-us__card:nth-child(1) .why-choose-us__card-content::before {
+  top: calc(100% + 10px);
+  right: 34px;
+  border-top: none;
+  border-right: none;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:nth-child(1) .why-choose-us__card-content::before {
+    display: none;
+  }
+}
+.why-choose-us__card:nth-child(2) .why-choose-us__card-content::before {
+  bottom: calc(100% + 10px);
+  right: 34px;
+  border-bottom: none;
+  border-right: none;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:nth-child(2) .why-choose-us__card-content::before {
+    top: 34px;
+    right: calc(100% + 10px);
+    border-bottom: 1px solid #78f7a8;
+    border-left: 1px solid #78f7a8;
+    border-top: none;
+    border-right: none;
+  }
+}
+.why-choose-us__card:nth-child(3) .why-choose-us__card-content::before {
+  display: none;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:nth-child(3) .why-choose-us__card-content::before {
+    display: block;
+    top: 34px;
+    left: calc(100% + 10px);
+    border-bottom: 1px solid #78f7a8;
+    border-right: 1px solid #78f7a8;
+    border-top: none;
+    border-left: none;
+  }
+}
+.why-choose-us__card:nth-child(4) .why-choose-us__card-content::before {
+  bottom: calc(100% + 10px);
+  left: 34px;
+  border-bottom: none;
+  border-left: none;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card:nth-child(4) .why-choose-us__card-content::before {
+    top: 34px;
+    right: calc(100% + 10px);
+    left: auto;
+    bottom: auto;
+    border-bottom: 1px solid #78f7a8;
+    border-left: 1px solid #78f7a8;
+    border-top: none;
+    border-right: none;
+  }
+}
+.why-choose-us__card-figure {
+  margin: 0;
+}
+.why-choose-us__card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 160px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card-figure-image {
+    width: 112px;
+  }
+}
+.why-choose-us__card-title {
+  font-family: "Suisse Int'l Mono", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #78f7a8;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card-title {
+    font-size: 16px;
+  }
+}
+.why-choose-us__card-text {
+  font-family: "Suisse Int'l Mono", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f5f5f5;
+}
+@media (max-width: 768px) {
+  .why-choose-us__card-text {
+    font-size: 16px;
+  }
+}
+
 .how-it-works__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

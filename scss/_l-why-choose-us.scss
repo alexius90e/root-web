@@ -1,2 +1,188 @@
 .why-choose-us {
+  &__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #f5f5f5;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    flex: 0 0 calc(25% + 24px / 4 * 3);
+    min-width: calc(25% + 24px / 4 * 3);
+    max-width: calc(25% + 24px / 4 * 3);
+    margin-left: -24px;
+    box-sizing: border-box;
+
+    @include tablet {
+      display: flex;
+      flex: 1 1 100%;
+      min-width: auto;
+      max-width: none;
+      margin-left: 0;
+      margin-top: -24px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      padding-top: 164px;
+
+      @include tablet {
+        justify-content: flex-end;
+        padding: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      padding-bottom: 164px;
+
+      @include tablet {
+        justify-content: flex-start;
+        padding: 0;
+      }
+    }
+
+    &-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 280px;
+      padding: 24px;
+      box-sizing: border-box;
+      border: 3px solid #101112;
+      background-color: #212a24;
+
+      @include tablet {
+        flex: 1 1 auto;
+        max-width: 380px;
+        min-width: 220px;
+        min-height: 220px;
+      }
+
+      @include mobile {
+        max-width: calc(100% - 180px);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 48px;
+        height: 100px;
+        border: 1px solid #78f7a8;
+      }
+    }
+
+    &:nth-child(1) &-content::before {
+      top: calc(100% + 10px);
+      right: 34px;
+      border-top: none;
+      border-right: none;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) &-content::before {
+      bottom: calc(100% + 10px);
+      right: 34px;
+      border-bottom: none;
+      border-right: none;
+
+      @include tablet {
+        top: 34px;
+        right: calc(100% + 10px);
+        border-bottom: 1px solid #78f7a8;
+        border-left: 1px solid #78f7a8;
+        border-top: none;
+        border-right: none;
+      }
+    }
+
+    &:nth-child(3) &-content::before {
+      display: none;
+
+      @include tablet {
+        display: block;
+        top: 34px;
+        left: calc(100% + 10px);
+        border-bottom: 1px solid #78f7a8;
+        border-right: 1px solid #78f7a8;
+        border-top: none;
+        border-left: none;
+      }
+    }
+
+    &:nth-child(4) &-content::before {
+      bottom: calc(100% + 10px);
+      left: 34px;
+      border-bottom: none;
+      border-left: none;
+
+      @include tablet {
+        top: 34px;
+        right: calc(100% + 10px);
+        left: auto;
+        bottom: auto;
+        border-bottom: 1px solid #78f7a8;
+        border-left: 1px solid #78f7a8;
+        border-top: none;
+        border-right: none;
+      }
+    }
+
+    &-figure {
+      margin: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 160px;
+        height: auto;
+
+        @include tablet {
+          width: 112px;
+        }
+      }
+    }
+
+    &-title {
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #78f7a8;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #f5f5f5;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
 }
