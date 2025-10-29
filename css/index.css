@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Suisse Int'l Mono";
+  src: url("../fonts/suisse-intl-mono.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -38,4 +44,28 @@ img {
   padding: 0 32px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.footer {
+  padding: 0 0 80px;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 40px;
+  }
+}
+.footer__copyright, .footer__info {
+  font-family: "Suisse Int'l Mono", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.3;
+}
+@media (max-width: 768px) {
+  .footer__copyright, .footer__info {
+    font-size: 20px;
+  }
+}
+.footer__info {
+  margin-top: 20px;
 }
