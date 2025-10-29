@@ -1,2 +1,101 @@
 .how-it-works {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include laptop {
+      gap: 80px 40px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+
+    @include tablet {
+      flex: 1 1 100%;
+      order: 1;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      width: 336px;
+      height: auto;
+
+      @include laptop {
+        width: 240px;
+      }
+
+      @include tablet {
+        width: 336px;
+      }
+    }
+  }
+
+  &__info {
+    flex: 1 1 auto;
+
+    @include tablet {
+      flex: 1 1 100%;
+      order: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 32px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #f5f5f5;
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    &-counter {
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #fff;
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      &-path {
+        opacity: 0.3;
+      }
+
+      &-id {
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #78f7a8;
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+  }
 }
