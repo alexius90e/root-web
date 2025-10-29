@@ -1,2 +1,11 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding: 200px 0;
+
+  @include tablet {
+    gap: 100px;
+    padding: 100px 0;
+  }
 }
