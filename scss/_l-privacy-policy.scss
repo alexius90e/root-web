@@ -1,2 +1,100 @@
 .privacy-policy {
+  &__title {
+    font-family: 'Geist', sans-serif;
+    margin: 0 0 32px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #f5f5f5;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-right: 140px;
+
+    @include laptop {
+      padding-right: 0;
+    }
+  }
+
+  &__card {
+    display: flex;
+    margin-top: -20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    &:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    &:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      max-width: 254px;
+
+      @include laptop {
+        position: static;
+        max-width: 360px;
+      }
+
+      @include tablet {
+        max-width: 254px;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 568px;
+      padding: 24px;
+      box-sizing: border-box;
+      border: 3px solid #101112;
+      background-color: #212a24;
+
+      @include tablet {
+        max-width: calc(100% - 32px);
+        width: 480px;
+      }
+
+      @include mobile {
+        max-width: calc(100% - 32px);
+        width: 346px;
+      }
+    }
+
+    &-id {
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      color: #78f7a8;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      font-family: "Suisse Int'l Mono", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #f5f5f5;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      &-main {
+        color: #78f7a8;
+      }
+    }
+  }
 }
